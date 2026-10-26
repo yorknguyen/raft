@@ -1,0 +1,413 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ăn Gì Ở Huế</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<style>
+/* Layout: a riverside menu board — sticky category rail over a two-column card grid that stacks on phones */
+:root{
+  --bg:#f6f3f7; --surface:#ffffff; --ink:#231a2b; --muted:#6b5f73; --line:#e3dbe8;
+  --accent:#5b2a6e;      /* tím Huế */
+  --accent-soft:#efe4f3;
+  --gold:#a8771a;        /* vàng cung đình */
+  --open:#1f7a4d; --open-bg:#e2f3ea; --closed:#9a3b3b; --closed-bg:#f6e3e3;
+  --display:"Literata",Georgia,"Times New Roman",serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17121b; --surface:#211a27; --ink:#efe8f3; --muted:#a99db2; --line:#352b3d;
+  --accent:#c9a0dc; --accent-soft:#33263d; --gold:#e0b45a;
+  --open:#6fd3a0; --open-bg:#173226; --closed:#ec9a9a; --closed-bg:#3a1f22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17121b; --surface:#211a27; --ink:#efe8f3; --muted:#a99db2; --line:#352b3d;
+  --accent:#c9a0dc; --accent-soft:#33263d; --gold:#e0b45a;
+  --open:#6fd3a0; --open-bg:#173226; --closed:#ec9a9a; --closed-bg:#3a1f22; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+header h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,6vw,46px);line-height:1.1;margin:0;text-wrap:balance;color:var(--accent)}
+header .sub{color:var(--muted);margin:8px 0 0;max-width:62ch}
+.clock{font-variant-numeric:tabular-nums;color:var(--gold);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:14px 10px;margin-top:18px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.groups{display:flex;gap:6px;flex-wrap:wrap}
+.grp{flex:none;border:none;background:var(--accent-soft);color:var(--accent);border-radius:8px;padding:8px 14px;font:600 14px var(--body);cursor:pointer}
+.grp[aria-pressed="true"]{background:var(--gold);color:var(--bg)}
+.grp:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (max-width:560px){.bar{position:static}}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 13px;font:500 14px var(--body);cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.chip:focus-visible,.btn:focus-visible,input:focus-visible,.more:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row input[type=search]{flex:1 1 220px;min-width:0;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:9px 12px;font:15px var(--body)}
+.toggle{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted);cursor:pointer;user-select:none}
+.toggle input{accent-color:var(--accent);width:16px;height:16px}
+section{margin-top:30px}
+section h2{font-family:var(--display);font-weight:500;font-size:24px;margin:0;display:flex;align-items:baseline;gap:10px}
+section h2 small{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:400}
+section .intro{color:var(--muted);margin:4px 0 14px;max-width:65ch;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{margin:0;font-size:17px;font-weight:600;line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:13px;color:var(--muted);align-items:center}
+.star{color:var(--gold);font-weight:600;font-variant-numeric:tabular-nums}
+.pill{font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px}
+.pill.open{background:var(--open-bg);color:var(--open)}
+.pill.closed{background:var(--closed-bg);color:var(--closed)}
+.tag{font-size:12px;padding:2px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.addr{font-size:14px;color:var(--muted);margin:0}
+.note{font-size:14px;margin:0}
+.hours{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.more{background:none;border:none;color:var(--accent);font:500 13px var(--body);padding:0;cursor:pointer}
+table.week{border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums;width:100%}
+table.week td{padding:2px 0;color:var(--muted)}
+table.week tr.today td{color:var(--ink);font-weight:600}
+table.week td:last-child{text-align:right}
+.actions{margin-top:auto;padding-top:4px}
+.btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font:600 14px var(--body);color:var(--accent);border:1px solid var(--accent);border-radius:9px;padding:7px 12px}
+.btn:hover{background:var(--accent);color:var(--bg)}
+.empty{color:var(--muted);padding:30px 0}
+/* Thời tiết: ngày đang chọn ở trên, dải ngày vuốt ngang, phần khí hậu gập lại được */
+.wx{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.wx-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.wx h2{font-family:var(--display);font-weight:500;font-size:22px;margin:0}
+.wx-head .upd{font-size:12px;color:var(--muted)}
+.pick{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:14px;row-gap:4px;align-items:center;background:var(--accent-soft);border-radius:12px;padding:14px 16px}
+.pick .big{font-size:42px;line-height:1;grid-row:span 2}
+.pick .when{font-size:13px;color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums}
+.pick .when span{color:var(--muted);font-weight:400}
+.pick .msg{margin:0;font-size:15px;line-height:1.45;color:var(--ink)}
+.pick .kao{color:var(--muted);white-space:nowrap}
+.pick .nw{white-space:nowrap}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(76px,1fr);gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;padding-bottom:6px;scrollbar-width:thin}
+.day{scroll-snap-align:start;border:1px solid var(--line);border-radius:10px;padding:8px 4px;display:flex;flex-direction:column;align-items:center;gap:3px;background:var(--bg);color:var(--ink);font:inherit;font-variant-numeric:tabular-nums;cursor:pointer}
+.day[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:var(--accent-soft)}
+.day:focus-visible,.more-wx summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.day .d{font-size:12px;color:var(--muted);text-align:center;line-height:1.3}
+.day .d b{display:block;color:var(--ink);font-weight:600}
+.day .ic{font-size:22px;line-height:1.15}
+.day .t{font-weight:700;font-size:15px}
+.day .t span{font-weight:400;font-size:12px;color:var(--muted)}
+.rain{display:flex;gap:2px;width:100%;padding:0 6px}
+.rain i{display:block;height:5px;flex:1;border-radius:2px;background:var(--line)}
+.rain i.on{background:var(--accent)}
+.hint{font-size:12px;color:var(--muted);margin:-4px 0 0}
+@media (min-width:721px){.hint{display:none}}
+.more-wx{border-top:1px solid var(--line);padding-top:6px}
+.more-wx summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:40px;font-weight:600;font-size:14px;color:var(--accent)}
+.more-wx summary::-webkit-details-marker{display:none}
+.more-wx summary::after{content:"+";font-size:20px;font-weight:400;line-height:1}
+.more-wx[open] summary::after{content:"–"}
+.more-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:18px;padding-top:6px}
+@media (max-width:720px){.more-body{grid-template-columns:1fr;gap:12px}}
+.wx .lead{margin:0;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
+.stat{border-top:2px solid var(--accent);padding-top:6px;min-width:0}
+.stat b{display:block;font-family:var(--display);font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink)}
+.stat span{font-size:12px;color:var(--muted)}
+.wx h3{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.wx ul{margin:0 0 12px;padding-left:18px;font-size:14px;display:grid;gap:4px}
+.wx .src{font-size:12px;color:var(--muted);margin:0}
+.wx .src a{color:var(--accent)}
+.later{font-size:13px;color:var(--muted);margin:0}
+footer{margin-top:44px;color:var(--muted);font-size:13px;max-width:70ch;border-top:1px solid var(--line);padding-top:16px}
+@media (prefers-reduced-motion:no-preference){.btn,.chip{transition:background .15s,color .15s}}
+</style>
+
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+const e = React.createElement;
+const {useState, useEffect, useMemo} = React;
+
+// ---- giờ mở cửa: mảng 7 phần tử, 0 = Chủ nhật ... 6 = Thứ 7; null = nghỉ; "24h" = mở cả ngày
+const H = (o, c) => Array(7).fill([o, c]);
+const with_ = (base, idx, val) => { const a = base.slice(); a[idx] = val; return a; };
+
+const CATS = [
+ {id:"bunbo", name:"Bún bò Huế", intro:"Món ăn sáng của người Huế. Quán ngon thường bán từ sáng sớm và hết hàng trước trưa.", places:[
+  {n:"Bún bò mệ Kéo", a:"20 Bạch Đằng, Phú Xuân", r:4.0, c:773, h:H("06:30","11:00"), pid:"ChIJA7_lQcqhQTERr2fmD14DNX8", note:"Quán vỉa hè, ghế thấp, nấu bếp củi. Toàn khách địa phương, hết sớm.", tags:["Chỉ bán sáng","Vỉa hè"]},
+  {n:"Bún Bò Huế Nhà An", a:"45 Nguyễn Công Trứ, Thuận Hóa", r:4.9, c:775, h:H("06:30","24:00"), pid:"ChIJfX-FSQChQTERbdMQeDk0_-c", note:"Nước dùng đậm, tự nêm theo khẩu vị. Chủ quán hay tặng nước và trái cây.", tags:["Mở khuya"]},
+  {n:"Bún Bò Huế Sen", a:"69 Võ Thị Sáu, Thuận Hóa", r:4.7, c:3552, h:H("06:00","22:00"), pid:"ChIJf5GG8n6hQTERFvp84sVz72I", note:"Quán rộng, có thêm bánh lọc, bánh nậm. Bát đặc biệt có đủ các loại thịt.", tags:["Rộng rãi"]},
+  {n:"Bún Bò Cố Đô (Cảnh Vân 2)", a:"268D Điện Biên Phủ, Thuận Hóa", r:4.9, c:324, h:H("06:00","13:30"), pid:"ChIJ94gEG8qhQTERNuxJOUv-UaA", note:"Nổi tiếng với sườn heo hầm mềm rời xương, nước dùng sâu vị.", tags:["Sườn hầm"]},
+ ]},
+ {id:"hen", name:"Cơm hến · Bún hến · Mì hến", intro:"Hến lấy từ sông Hương, trộn với cơm nguội, bún hoặc mì, rau sống, tóp mỡ, mắm ruốc. Khu Ưng Bình gần cồn Hến là nơi gốc của món này.", places:[
+  {n:"Cơm hến Hoa Đông", a:"64 kiệt 7 Ưng Bình, Vỹ Dạ", r:4.4, c:2563, h:H("07:00","21:30"), pid:"ChIJw-bA7iChQTERuhJwR1CpO14", note:"Đủ cơm, bún, mì hến và hến xào. Một chén nhỏ, nên gọi hai.", tags:["Gần cồn Hến","Ghế nhựa"]},
+  {n:"Cơm hến Hương Xưa", a:"30/7 Ưng Bình, Vỹ Dạ", r:4.7, c:120, h:Array(7).fill("24h"), pid:"ChIJfzvOFQOhQTERVXFv4ZB10GM", note:"Cơm hến, bún hến ngon. Quán ghi mở cả ngày trên Google Maps, nên gọi trước nếu đi khuya.", tags:["Mở 24h"]},
+  {n:"Cơm hến 05 Hàn Mặc Tử", a:"05 Hàn Mặc Tử, Vỹ Dạ", r:4.8, c:308, h:H("07:00","23:00"), pid:"ChIJDXw45HKhQTERMfw2YkD-rB4", note:"Mới sửa sang, sạch. Cơm hến khoảng 12k, có thêm bánh nậm, lọc, chè bắp.", tags:["Rẻ","Sạch"]},
+  {n:"Cơm hến, bún hến Lành", a:"23 Ngô Gia Tự, Thuận Hóa", r:4.5, c:111, h:H("06:00","13:00"), pid:"ChIJ7TSntNShQTER9mqGoyeIj5A", note:"Quán sáng của người địa phương, menu chỉ tiếng Việt, giá như khách quen.", tags:["Ăn sáng"]},
+ ]},
+ {id:"banh", name:"Bánh bèo · Nậm · Lọc", intro:"Các loại bánh hấp và bánh bột lọc chấm nước mắm ngọt. Gọi đĩa thập cẩm để thử nhiều loại.", places:[
+  {n:"Bánh Bèo Nậm Lọc Huế Xưa", a:"1 Nguyễn Bỉnh Khiêm, Phú Xuân", r:4.8, c:1684, h:H("08:00","20:30"), pid:"ChIJj6_QhNigQTER9tjNs7kG564", note:"Đủ bèo, nậm, lọc, nem lụi, ram ít. Chủ quán có thể gom combo theo số người.", tags:["Nhiều món"]},
+  {n:"Quán Ngọ", a:"30 Phú Mộng, Kim Long", r:4.9, c:170, h:H("07:00","19:00"), pid:"ChIJiyBFPwCnQTERYNgDOwLmnHw", note:"Ngồi dưới gốc cây măng cụt, bánh hấp tại chỗ nên chờ hơi lâu nhưng nóng hổi.", tags:["Sân vườn"]},
+  {n:"Quán Bánh Chi", a:"52 Lê Viết Lượng, Vỹ Dạ", r:4.3, c:977, h:H("08:00","19:30"), pid:"ChIJmTLO9UmhQTERpFTcIlHHX5k", note:"Đông người địa phương buổi trưa. Đĩa thập cẩm khoảng 80k đủ hai người.", tags:["Đông khách địa phương"]},
+  {n:"Quán Hạnh", a:"11–15 Phó Đức Chính, Thuận Hóa", r:4.3, c:4214, h:H("10:00","21:00"), pid:"ChIJU9pqrT2hQTERVjWXDOOcO8w", note:"Bánh khoái nổi tiếng, có set menu nhiều món Huế. Đông khách du lịch.", tags:["Bánh khoái"]},
+ ]},
+ {id:"banhcanh", name:"Bánh canh", intro:"Bánh canh cua có nước trong, nhiều cua. Bánh canh Nam Phổ nước sệt màu đỏ cam, sợi ngắn, ăn bằng muỗng.", places:[
+  {n:"Bánh Canh Cua Rời Mệ Nga", a:"32 Phạm Hồng Thái, Thuận Hóa", r:4.6, c:875, h:H("06:00","20:00"), pid:"ChIJd1ZCqfahQTERPiIJy_wZSEs", note:"Nhiều cua, có sườn và giò. Cua còn nhiều vỏ, ăn cẩn thận.", tags:["Bánh canh cua"]},
+  {n:"Bánh Canh Cua Hương", a:"30 Phạm Hồng Thái, Thuận Hóa", r:4.2, c:917, h:H("06:00","21:00"), pid:"ChIJzRdm1DuhQTERVhrxsJq4j9Y", note:"Sợi bột gạo dai, nước dùng cân bằng, giò heo mềm. Có thể thêm trứng cút.", tags:["Bánh canh cua"]},
+  {n:"Bánh Canh Nam Phổ – Quán Hằng", a:"9 Phó Đức Chính, Thuận Hóa", r:4.7, c:203, h:with_(H("06:00","20:00"),6,null), pid:"ChIJpabhdgChQTERlCk5l8Rh79Q", note:"Quán nhỏ, sạch, giá bình dân. Hay hết hàng từ chiều, nên đi buổi sáng. Nghỉ thứ Bảy.", tags:["Nam Phổ"]},
+  {n:"Rin – Bánh Canh Nam Phổ", a:"15 Hàn Mặc Tử, Vỹ Dạ", r:5.0, c:126, h:H("06:30","20:30"), pid:"ChIJvT_EVwChQTERBPIcTYYJ5as", note:"Nhìn ra sông, chén nhỏ khoảng 20k. Có bèo, nậm, lọc.", tags:["Nam Phổ","View sông"]},
+  {n:"Bánh canh vịt Ngọc Tường", a:"90 Lê Viết Lượng, An Cựu", r:5.0, c:347, h:H("11:00","21:00"), pid:"ChIJW3uv-B2hQTER8Mccy4oqgrk", note:"Vịt mềm, nước dùng thanh, chấm nước gừng.", tags:["Bánh canh vịt"]},
+  {n:"Bánh canh O Bướm", a:"3 Trịnh Công Sơn, Phú Xuân", r:4.3, c:526, h:H("16:30","02:00"), pid:"ChIJX9R0_uahQTERvaqCs8T0oDE", note:"Lựa chọn ăn khuya. Review trái chiều, nên thêm sa tế.", tags:["Ăn khuya"]},
+ ]},
+ {id:"bunlong", name:"Bún lòng xào nghệ", intro:"Món chiều của Huế: lòng heo hoặc bò xào nghệ, sả, ăn với bún và rau thơm. Ít quán được review trên Google Maps.", places:[
+  {n:"Bún Nghệ", a:"19 Trần Quang Khải, Thuận Hóa", r:4.2, c:66, h:with_(H("13:00","19:00"),3,["13:00","19:30"]), pid:"ChIJ9YPlyT2hQTER_jbPis62e8U", note:"Quán nhỏ khoảng 4 bàn, có lòng heo và lòng bò. Lúc đông phải chờ.", tags:["Bán chiều"]},
+  {n:"Bún lòng xào nghệ (Hai Bà Trưng)", a:"15A Hai Bà Trưng, Thuận Hóa", r:4.5, c:2, h:H("06:00","10:00"), pid:"ChIJjZ1DZgChQTERfliULpThW7A", note:"Quán sáng, rất ít review nên chưa kiểm chứng được. Thử nếu ở gần.", tags:["Ít review"]},
+ ]},
+ {id:"com", name:"Cơm", intro:"Cơm nhà kiểu Huế, cơm gà và mâm cơm truyền thống.", places:[
+  {n:"Quán cơm Huế O Én", a:"1 Trần Thúc Nhẫn, Thuận Hóa", r:4.6, c:485, h:with_(H("06:00","14:00"),6,["11:00","14:00"]), pid:"ChIJxxBuFvKhQTERiUObAAx8DLE", note:"Cơm gia đình, gọi theo số người. Set hai người khoảng 70k.", tags:["Cơm nhà","Bán trưa"]},
+  {n:"Mâm – Cơm Việt Lối Huế", a:"10 Hà Huy Tập, Vỹ Dạ", r:4.8, c:949, h:H("08:00","22:00"), pid:"ChIJ35JkRDihQTERM37X0GHXP5E", note:"Mâm cơm Huế bày đẹp, có hến xúc bánh tráng. Giá nhỉnh hơn quán bình dân.", tags:["Mâm cơm"]},
+  {n:"Cơm gà A Thiện", a:"182 Nguyễn Sinh Cung, Vỹ Dạ", r:4.8, c:51, h:with_(H("10:00","20:30"),1,["10:00","22:30"]), pid:"ChIJb7UycgChQTERLKZPcz0gLhA", note:"Gà chiên tại chỗ, cơm gà xé được khen hơn đùi gà.", tags:["Cơm gà"]},
+ ]},
+ {id:"che", name:"Chè Huế", intro:"Chè Huế có hàng chục loại. Món nên thử là chè bột lọc heo quay: viên bột lọc nhân thịt heo quay trong nước đường gừng.", places:[
+  {n:"Chè Hẻm", a:"1 kiệt 29 Hùng Vương, Thuận Hóa", r:4.0, c:3687, h:H("10:00","22:00"), pid:"ChIJpW9Fp2uhQTERZzdZ_q7dPC8", note:"Quán chè lâu đời trong kiệt, mỗi ly khoảng 16k.", tags:["Lâu đời","Rẻ"]},
+  {n:"Chè Mợ Tôn Đích", a:"3/3 Đinh Tiên Hoàng, Phú Xuân", r:3.8, c:1756, h:H("17:00","24:00"), pid:"ChIJD183ZTChQTERshU9NVWTRBw", note:"Ngồi trong nhà của gia đình. Gọi chè bột lọc heo quay và khoai tía.", tags:["Heo quay","Bán tối"]},
+  {n:"Chè ông Lạc", a:"36 Thanh Tịnh, Vỹ Dạ", r:4.6, c:234, h:H("10:00","21:00"), pid:"ChIJd8MSpAyhQTERWbSYzgbRGFI", note:"Quán nhỏ trong nhà, chè ít ngọt. Thử ly thập cẩm đậu, đậu phộng, dừa.", tags:["Ít ngọt"]},
+  {n:"Chè Cầm", a:"10 Nguyễn Sinh Cung, Vỹ Dạ", r:4.1, c:427, h:with_(H("16:00","22:00"),2,null), pid:"ChIJ_09WLiKhQTER8EhZYIgQwcA", note:"Ngồi vỉa hè, khoảng 20k một ly. Nghỉ thứ Ba.", tags:["Bán tối"]},
+  {n:"Ngọc Chè Bưởi", a:"07 Trương Định, Thuận Hóa", r:4.6, c:395, h:H("10:00","22:30"), pid:"ChIJx-1EO3OhQTERjPCREBC0BZk", note:"Nhiều lựa chọn, từ chè bưởi đến tàu hũ, caramen. Chè khoai dẻo khoảng 30k được khen nhiều. Quán sạch.", tags:["Chè bưởi","Sạch sẽ"]},
+ ]},
+ {id:"anvat", name:"Ăn vặt", intro:"Bánh ép là món ăn vặt kiểu Huế: bánh bột ép mỏng giòn, cuốn rau chấm nước mắm. Giá chỉ vài nghìn một cái, ăn bao nhiêu gọi bấy nhiêu.", places:[
+  {n:"Gia Di – Bánh Ép", a:"4 Phùng Chí Kiên, Vỹ Dạ", r:4.4, c:2139, h:H("10:00","21:30"), pid:"ChIJcSgHUBahQTERoT8n4ZcwgK8", note:"Các cô ép bánh bằng tay ngay trước mặt. Có thêm bánh tôm chiên, hàu.", tags:["Bánh ép","Đông khách"]},
+  {n:"Bánh Ép Trang", a:"9A Nguyễn Hữu Thọ, Vỹ Dạ", r:4.6, c:1058, h:H("10:30","21:30"), pid:"ChIJ5VYMEhuhQTERpW-aeM_gxT8", note:"Bánh ra nhanh, rau tươi nhiều. Quán rất local.", tags:["Bánh ép"]},
+  {n:"Tiệm bánh ép 1992", a:"7/18 Hoàng Quốc Việt", r:4.3, c:697, h:H("10:00","21:00"), pid:"ChIJh8iWF1ihQTER-FkFDBgDBK4", note:"Nằm trong kiệt, lúc nào cũng kín chỗ.", tags:["Bánh ép","Trong kiệt"]},
+  {n:"Bánh Ép Chị Xí", a:"107 Nhật Lệ, Phú Xuân", r:4.5, c:40, h:with_(H("09:00","23:00"),0,["09:00","23:30"]), pid:"ChIJwS_hfyyhQTERWY1xeTo0GDo", note:"Gần Đại Nội. Có bánh ép dẻo, bánh tráng trứng, bánh bèo chén. Hai người ăn uống khoảng 100k.", tags:["Gần Đại Nội","Mở khuya"]},
+  {n:"Chita – Bánh Ướt Chồng Dĩa", a:"4/25 Bến Nghé, Thuận Hóa", r:4.9, c:316, h:H("09:00","21:00"), pid:"ChIJEVt73mOhQTERDnYqhIU_uYY", note:"Bánh ướt chồng dĩa, bánh nậm, bánh lọc. Nằm sát Chè Hẻm, ăn xong qua làm ly chè.", tags:["Bánh ướt","Cạnh Chè Hẻm"]},
+ ]},
+ {id:"nemlui", name:"Nem lụi · Bánh khoái", intro:"Nem lụi nướng trên than, cuốn bánh tráng với rau và chấm tương đậu phộng. Bánh khoái nhỏ và giòn hơn bánh xèo, ăn cùng một loại nước chấm.", places:[
+  {n:"Nem lụi Ku Huế", a:"46 Nguyễn Biểu, Phú Xuân", r:4.9, c:59, h:H("15:00","20:00"), pid:"ChIJfwGlL--hQTERqn48D5UWTFw", note:"Bán ngay hiên nhà, nướng tại chỗ. Tiện ghé sau khi tham quan Đại Nội.", tags:["Bán chiều","Gần Đại Nội"]},
+  {n:"Nem Lụi O Đen", a:"04 Tố Hữu, Thuận Hóa", r:4.4, c:178, h:H("09:00","21:30"), pid:"ChIJL-b0IHKhQTER5m1TA2AUT_o", note:"Nướng theo order, tương đậu phộng ngon. Có cả bún thịt nướng. Hai người khoảng 90k.", tags:["Khách địa phương"]},
+  {n:"Quán Bà Tý (cơ sở 2)", a:"10 Lê Minh, An Cựu", r:4.7, c:93, h:H("10:00","21:00"), pid:"ChIJJSiSKwChQTERPhn0gHcV7PU", note:"Nem lụi, bún thịt nướng, bánh ướt thịt nướng.", tags:["Bún thịt nướng"]},
+  {n:"Bánh Khoái Hồng Mai", a:"110 Đinh Tiên Hoàng, Phú Xuân", r:4.4, c:919, h:H("10:30","20:30"), pid:"ChIJXa5emS6hQTERelWr0F1FPLw", note:"Bánh khoái rất giòn, nước chấm đậu phộng ngon. Đi bộ được từ Đại Nội.", tags:["Bánh khoái","Gần Đại Nội"]},
+  {n:"Bánh Khoái Kim Long", a:"84 Kim Long", r:4.5, c:71, h:with_(H(["08:00","11:00"],["16:00","21:00"]).map(()=>[["08:00","11:00"],["16:00","21:00"]]),6,["08:00","21:30"]), pid:"ChIJi6UU0oynQTERNz2LbezwsPs", note:"Chỉ bán một món bánh khoái, ngồi là có. Nghỉ trưa, trừ thứ Bảy.", tags:["Một món","Bán 2 ca"]},
+ ]},
+ {id:"banhmi", name:"Bánh mì", intro:"Bánh mì Huế ổ nhỏ, giòn, nhân chả, pa tê và ớt. Một ổ thường chưa no, nên gọi hai.", places:[
+  {n:"Bánh Mì Ba Bự", a:"39 Bến Nghé, Thuận Hóa", r:4.9, c:1207, h:H("06:00","21:00"), pid:"ChIJBUggGAChQTERRLLs-jkDU7o", note:"Vỏ bánh nóng giòn, nhiều rau. Có bánh mì gà, cà phê cũng ngon.", tags:["Trung tâm"]},
+  {n:"Bánh Mì Trường Tiền O Tho", a:"14 Trần Cao Vân, Thuận Hóa", r:4.4, c:1778, h:Array(7).fill([["06:30","11:00"],["15:00","03:00"]]), pid:"ChIJi6AVjFShQTERxbHMMNP8_oM", note:"Ổ nhỏ 15–25k, nhiều loại nhân như xíu mại, chả nướng ống tre. Bán đến 3 giờ sáng, hợp ăn khuya.", tags:["Ăn khuya","Bán 2 ca"]},
+  {n:"Lò Bánh Mì Hữu", a:"115 Thạch Hãn, Phú Xuân", r:4.7, c:24, h:H("06:00","21:30"), pid:"ChIJD1IAutKmQTERHhmQ4kybITE", note:"Ổ nhỏ khoảng 10k, hợp ăn sáng nhanh.", tags:["Rẻ"]},
+ ]},
+ {id:"oc", name:"Ốc", intro:"Ăn ốc là thú vui buổi chiều của người trẻ Huế. Khu Mỹ Thượng (hướng biển Thuận An, cách trung tâm khoảng 5 km) có nhiều quán ốc rẻ và đông.", places:[
+  {n:"Quán Ốc Thành Mập", a:"Dưỡng Mong, Mỹ Thượng", r:4.7, c:114, h:H("13:00","23:00"), pid:"ChIJp5NuQRmhQTERo5NNfO3xSTI", note:"Sân rộng, thoáng. Nước xốt ốc đậm, chấm bánh mì rất đã. Hơi cay, dặn bớt nếu cần.", tags:["Xa trung tâm","Sân rộng"]},
+  {n:"Ốc Triều Thủy", a:"Xóm 8 làng Triều Thủy, Mỹ Thượng", r:4.4, c:502, h:H("12:00","21:00"), pid:"ChIJI1z_f3ugQTERUeEBhyhgA2I", note:"Quán nổi tiếng, người Huế hay giới thiệu. Món nhỏ, rẻ. Một số món hết sớm.", tags:["Xa trung tâm","Đông khách"]},
+  {n:"Ốc Truyền Nam", a:"Truyền Nam, Mỹ Thượng", r:4.5, c:300, h:H("13:00","21:00"), pid:"ChIJOegDpkWhQTERaLsDcB1K1W4", note:"Ốc xào đậm vị, giá rẻ. Nên ngồi sân trong cho mát, khu ngoài hơi khói.", tags:["Xa trung tâm"]},
+  {n:"Quán Ốc Ngon Triều Thuỷ", a:"23/19 Đặng Văn Ngữ, An Cựu", r:4.6, c:81, h:with_(H("13:30","21:30"),3,["11:30","21:30"]), pid:"ChIJBXYutIuhQTERls--HThtlAM", note:"Ngay trong thành phố, cạnh hồ trái tim. Đĩa ốc từ 10–30k, đông người địa phương.", tags:["Trong thành phố","Rẻ"]},
+  {n:"Ốc Chú Mập", a:"69 Đặng Huy Trứ, Thuận Hóa", r:4.3, c:185, h:H("14:00","24:00"), pid:"ChIJGUX9pw6hQTERq1avJoeLyR0", note:"Hải sản và ốc còn sống trong bể, ốc to. Mở đến nửa đêm.", tags:["Mở khuya"]},
+ ]},
+ {id:"cafe", name:"Cà phê", intro:"Đặc sản là cà phê muối. Các quán dưới đây chọn theo view sông Hương và không gian đẹp.", places:[
+  {n:"Starbucks Sông Hương", a:"34 Lê Lợi (nhà hàng nổi Sông Hương)", r:4.8, c:1608, h:H("07:00","22:00"), pid:"ChIJbXq_aWmhQTERhlmKdD_VtQY", note:"Thiết kế hình hoa sen trên sông, nhìn thẳng cầu Trường Tiền lên đèn buổi tối.", tags:["View cầu Trường Tiền"]},
+  {n:"Vỹ Dạ Xưa", a:"131 Nguyễn Sinh Cung, Vỹ Dạ", r:4.8, c:2247, h:H("06:15","22:30"), pid:"ChIJD5XAcCChQTERPAUqBxOcz3U", note:"Trong làng Vỹ Dạ, sân sau giáp sông. Có set trà cung đình, cà phê muối và đồ ăn sáng.", tags:["View sông","Lâu năm"]},
+  {n:"Mê Cafe – Bến Xưa Vĩ Dạ", a:"4 kiệt 73 Nguyễn Sinh Cung, Vỹ Dạ", r:4.9, c:152, h:H("06:00","22:00"), pid:"ChIJiRSzegChQTERC_Hk20pUJjY", note:"Quán nhỏ sát mép sông, yên tĩnh, xa đường lớn.", tags:["View sông","Yên tĩnh"]},
+  {n:"Sông Xanh Café", a:"1 kiệt 7 Nguyễn Công Trứ, Thuận Hóa", r:4.2, c:138, h:H("06:30","22:00"), pid:"ChIJh1U0XCKhQTERhxqpoE-GcHQ", note:"Vườn nhỏ nhìn ra sông Hương, gần khu phố Tây.", tags:["View sông"]},
+  {n:"Củi Coffee", a:"164 Bùi Thị Xuân, Thuận Hóa", r:4.8, c:1742, h:[["06:00","22:30"],["06:30","22:00"],["06:30","22:00"],["06:30","22:00"],["06:30","22:00"],["06:30","22:00"],["06:00","22:30"]], pid:"ChIJI0gABgCnQTERvgnO6hvV0c8", note:"Như vườn bách thảo, có hồ cá koi, chòi tre ven sông. Đông vào sáng cuối tuần.", tags:["Sân vườn","View sông"]},
+  {n:"DeChill", a:"102 Huyền Trân Công Chúa, đồi Vọng Cảnh", r:4.5, c:331, h:H("06:00","22:00"), pid:"ChIJD78AXp2lQTER04fhSb6FbFs", note:"Ven sông dưới đồi Vọng Cảnh, hợp ngắm hoàng hôn khi đi lăng tẩm.", tags:["Hoàng hôn","Xa trung tâm"]},
+  {n:"Đề-Pô Cafe", a:"Lầu 2 chợ Đông Ba, 2 Trần Hưng Đạo", r:4.6, c:720, h:H("07:00","22:00"), pid:"ChIJs3iMadGhQTERMXlGtFMOz4o", note:"Nằm trên lầu chợ Đông Ba, ban công nhìn xuống phố. Hơi khó tìm lối lên.", tags:["Chợ Đông Ba"]},
+  {n:"Thành Cafe", a:"24 Văn Cao, Vỹ Dạ", r:4.6, c:345, h:H("06:30","22:00"), pid:"ChIJ-SeUauuhQTEReqAT_-rB3ec", note:"Quán khách địa phương, cà phê muối và cà phê trứng muối được khen nhiều.", tags:["Cà phê muối"]},
+ ]},
+];
+
+const GROUPS = [
+  {id:"all", name:"Tất cả", cats:null},
+  {id:"g-main", name:"🍜 Bữa chính", cats:["bunbo","hen","banhcanh","bunlong","com","banh"]},
+  {id:"g-snack", name:"🍢 Ăn vặt & ốc", cats:["anvat","nemlui","banhmi","oc"]},
+  {id:"g-sweet", name:"🍧 Chè & cà phê", cats:["che","cafe"]},
+];
+const inSel = (sel, catId) => { if (sel==="all") return true; const g = GROUPS.find(g=>g.id===sel); return g ? g.cats.includes(catId) : sel===catId; };
+
+const DAYS = ["Chủ nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+const toMin = s => { const [h,m] = s.split(":").map(Number); return h*60+m; };
+
+function hueNow(){
+  const parts = new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Ho_Chi_Minh",weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+  const get = t => parts.find(p=>p.type===t).value;
+  const day = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(get("weekday"));
+  return {day, min: Number(get("hour"))*60 + Number(get("minute"))};
+}
+
+// mỗi ngày: null | "24h" | [mở, đóng] | [[mở, đóng], [mở, đóng]] (bán 2 ca)
+const ranges = t => !t || t==="24h" ? [] : Array.isArray(t[0]) ? t : [t];
+function isOpen(hours, now){
+  const t = hours[now.day];
+  if (t === "24h") return true;
+  for (const [a,b] of ranges(t)){ const o=toMin(a), c=toMin(b);
+    if (c > o ? (now.min>=o && now.min<c) : (now.min>=o)) return true; }
+  // ca hôm qua kéo qua nửa đêm
+  for (const [a,b] of ranges(hours[(now.day+6)%7])){ const o=toMin(a), c=toMin(b);
+    if (c<=o && now.min<c) return true; }
+  return false;
+}
+const fmt = t => t===null ? "Nghỉ" : t==="24h" ? "Mở cả ngày" : ranges(t).map(([a,b])=>`${a} – ${b==="24:00"?"00:00":b}`).join(", ");
+const mapsUrl = p => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.n+", "+p.a+", Huế")}&query_place_id=${p.pid}`;
+
+function Card({p, now}){
+  const [week, setWeek] = useState(false);
+  const open = isOpen(p.h, now);
+  return e("article",{className:"card"},
+    e("h3",null,p.n),
+    e("div",{className:"meta"},
+      e("span",{className:"pill "+(open?"open":"closed")}, open?"Đang mở":"Đang đóng"),
+      e("span",{className:"star"},"★ "+p.r.toFixed(1)),
+      e("span",null,p.c.toLocaleString("vi-VN")+" đánh giá")),
+    e("p",{className:"addr"},p.a),
+    e("p",{className:"note"},p.note),
+    e("div",{className:"meta"}, p.tags.map(t=>e("span",{key:t,className:"tag"},t))),
+    e("div",{className:"hours"},
+      "Hôm nay: ", e("strong",null,fmt(p.h[now.day])), " · ",
+      e("button",{className:"more",onClick:()=>setWeek(!week),"aria-expanded":week}, week?"Ẩn lịch tuần":"Cả tuần")),
+    week && e("table",{className:"week"}, e("tbody",null,
+      [1,2,3,4,5,6,0].map(d=>e("tr",{key:d,className:d===now.day?"today":""},
+        e("td",null,DAYS[d]), e("td",null,fmt(p.h[d])))))),
+    e("div",{className:"actions"},
+      e("a",{className:"btn",href:mapsUrl(p),target:"_blank",rel:"noopener"},"Mở Google Maps ↗"))
+  );
+}
+
+function Weather(){
+  const today = hueToday();
+  const days = FORECAST.filter(d=>d.date>=today);
+  const [sel, setSel] = useState(days[0] && days[0].date);
+  const cur = days.find(d=>d.date===sel) || days[0];
+  const [open, setOpen] = useState(()=>{ try{ return window.matchMedia("(min-width:721px)").matches; }catch(_){ return true; } });
+  const last = FORECAST[FORECAST.length-1].date.split("-").map(Number);
+  return e("aside",{className:"wx","aria-label":"Thời tiết Huế"},
+    e("div",{className:"wx-head"},
+      e("h2",null,"Thời tiết Huế"),
+      e("span",{className:"upd"},"Dự báo cập nhật 29/10")),
+    days.length===0
+      ? e("p",{className:"later"},"Dự báo trong trang đã cũ. Nhắn anh cập nhật lại nhé.")
+      : e(React.Fragment,null,
+          e(Pick,{d:cur, today}),
+          e("div",{className:"strip",role:"group","aria-label":"Chọn ngày"}, days.map(d=>{
+            const L = dayLabel(d.date, today);
+            return e("button",{key:d.date,type:"button",className:"day","aria-pressed":d.date===cur.date,onClick:()=>setSel(d.date)},
+              e("div",{className:"d"}, e("b",null,L.short), L.dm),
+              e("div",{className:"ic","aria-hidden":"true"}, icon(d.rain)),
+              e("div",{className:"t"}, d.hi+"°", e("span",null," "+d.lo+"°")),
+              e("div",{className:"rain","aria-label":"Mức mưa "+d.rain+" trên 3"}, [1,2,3].map(i=>e("i",{key:i,className:i<=d.rain?"on":""}))));
+          })),
+          e("p",{className:"hint"},"Vuốt ngang để xem thêm ngày, chạm vào một ngày để đọc lời nhắn.")),
+    e("details",{className:"more-wx",open,onToggle:ev=>setOpen(ev.currentTarget.open)},
+      e("summary",null,"Khí hậu tháng 11 & mẹo đi ăn mùa mưa"),
+      e("div",{className:"more-body"},
+        e("div",null,
+          e("p",{className:"lead"},"Mùa mưa, trời se lạnh, hay có mưa phùn. Đúng lúc để ngồi bên tô bún bò nóng hay chén chè gừng đấy em."),
+          e("div",{className:"stats"},
+            e("div",{className:"stat"},e("b",null,"21–26°"),e("span",null,"Thấp – cao trung bình")),
+            e("div",{className:"stat"},e("b",null,"~445 mm"),e("span",null,"Mưa cả tháng")),
+            e("div",{className:"stat"},e("b",null,"#2"),e("span",null,"Tháng mưa nhiều nhất, sau tháng 10")))),
+        e("div",null,
+          e("h3",null,"Dự báo năm nay"),
+          e("ul",null,
+            e("li",null,"30/10 mưa to, 31/10 còn mưa rào và dông. 1–2/11 tạm ngớt mưa, sau đó mưa rào quay lại."),
+            e("li",null,"Cả tháng 11: tổng lượng mưa nhiều nơi thấp hơn trung bình 20–40%, nhưng mưa to vẫn tập trung ở Trung Bộ."),
+            e("li",null,`Sau ${last[2]}/${last[1]} chưa có dự báo đáng tin. Nửa cuối tháng 11 thường mát hơn, vẫn có những đợt mưa dài.`)),
+          e("h3",null,"Mẹo đi ăn mùa mưa"),
+          e("ul",null,
+            e("li",null,"Mang áo mưa và áo khoác mỏng, buổi tối và sáng sớm khá se lạnh."),
+            e("li",null,"Quán vỉa hè có thể nghỉ khi mưa lớn. Gọi trước hoặc chọn quán có mái."),
+            e("li",null,"Khu ven sông như Vỹ Dạ, cồn Hến dễ ngập. Xem tin cảnh báo lũ trước khi đi.")),
+          e("p",{className:"src"},"Nguồn: dự báo từng ngày của ",
+            e("a",{href:"https://nchmf.gov.vn/kttvsite/vi-VN/1/thuan-hoa-tp-hue-w7.html",target:"_blank",rel:"noopener"},"Trung tâm Dự báo KTTV quốc gia"),
+            "; xu thế tháng 11 qua ",
+            e("a",{href:"https://congdankhuyenhoc.vn/thoi-tiet-thang-11-2026-mua-thap-hon-trung-binh-nhieu-nam-179261024093344547.htm",target:"_blank",rel:"noopener"},"Công dân & Khuyến học"),
+            "; số liệu trung bình nhiều năm từ ",
+            e("a",{href:"https://www.weather2travel.com/climate-guides/vietnam/hue.php",target:"_blank",rel:"noopener"},"weather2travel"),
+            ".")))));
+}
+
+function Pick({d, today}){
+  const L = dayLabel(d.date, today);
+  return e("div",{className:"pick","aria-live":"polite"},
+    e("div",{className:"big","aria-hidden":"true"}, icon(d.rain)),
+    e("div",{className:"when"}, L.long+" · "+L.dm+" ", e("span",null,"· "+d.c+" · ", e("span",{className:"nw"}, d.lo+"–"+d.hi+"°"))),
+    e("p",{className:"msg"}, dayMsg(d), " ", e("span",{className:"kao","aria-hidden":"true"}, KAO[d.rain])));
+}
+
+// Dự báo từng ngày cho Thuận Hóa (TP Huế), Trung tâm Dự báo KTTV quốc gia, xem lúc 22h 29/10/2026.
+// rain: 0 không mưa, 1 mưa rào/nhẹ, 2 mưa rào có dông, 3 mưa to
+const FORECAST = [
+  {date:"2026-10-30", lo:22, hi:27, c:"Mưa to", rain:3},
+  {date:"2026-10-31", lo:22, hi:29, c:"Mưa rào, có dông", rain:2},
+  {date:"2026-11-01", lo:23, hi:30, c:"Nhiều mây, không mưa", rain:0},
+  {date:"2026-11-02", lo:22, hi:32, c:"Nhiều mây, không mưa", rain:0},
+  {date:"2026-11-03", lo:22, hi:30, c:"Mưa rào", rain:1},
+  {date:"2026-11-04", lo:24, hi:27, c:"Mưa rào, có dông", rain:2},
+  {date:"2026-11-05", lo:23, hi:28, c:"Mưa rào", rain:1},
+  {date:"2026-11-06", lo:23, hi:31, c:"Mưa rào", rain:1},
+  {date:"2026-11-07", lo:23, hi:30, c:"Nhiều mây, không mưa", rain:0},
+  {date:"2026-11-08", lo:23, hi:30, c:"Nhiều mây, không mưa", rain:0},
+];
+const DOW = ["CN","T2","T3","T4","T5","T6","T7"];
+const DOW_LONG = ["Chủ nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+function dayLabel(date, today){
+  const [y,m,dd] = date.split("-").map(Number), [ty,tm,td] = today.split("-").map(Number);
+  const w = new Date(Date.UTC(y,m-1,dd)).getUTCDay();
+  const diff = Math.round((Date.UTC(y,m-1,dd) - Date.UTC(ty,tm-1,td)) / 864e5);
+  return { dm: dd+"/"+m,
+    short: diff===0 ? "Nay" : diff===1 ? "Mai" : DOW[w],
+    long:  diff===0 ? "Hôm nay" : diff===1 ? "Ngày mai" : DOW_LONG[w] };
+}
+// Lời nhắn cho em theo mức mưa; đêm xuống 23° trở xuống là trời se lạnh
+const ICONS = {3:"⛈️", 2:"☔", 1:"🌦️", 0:"⛅"};
+const KAO = {3:"( ´•̥̥̥ω•̥̥̥` )", 2:"(ノ﹏ヽ)", 1:"(˶ᵔ ᵕ ᵔ˶)", 0:"٩(◕‿◕)۶"};
+const icon = r => ICONS[r];
+function dayMsg(d){
+  const cold = d.lo <= 23;
+  if (d.rain >= 2) return (d.rain===3 ? "Nay mưa to lắm đó em. " : "Nay mưa đó em. ") + "Nhớ mang theo ô và áo khoác để tránh cảm nhé!";
+  if (d.rain === 1) return "Nay mưa nhẹ thôi, em có thể đi chơi thoải mái nhá." + (cold ? " Tối se lạnh, khoác thêm áo nha." : "");
+  return "Nay không mưa, đi chơi thôi em ơi!" + (cold ? " Tối lạnh nhớ mang áo khoác nhé." : "");
+}
+function hueToday(){ return new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Ho_Chi_Minh"}).format(new Date()); }
+
+function App(){
+  const [now, setNow] = useState(hueNow());
+  const [cat, setCat] = useState(()=>{ try{return localStorage.getItem("hue-cat")||"all"}catch(_){return "all"} });
+  const [q, setQ] = useState("");
+  const [onlyOpen, setOnlyOpen] = useState(false);
+  useEffect(()=>{ const t=setInterval(()=>setNow(hueNow()),60000); return ()=>clearInterval(t); },[]);
+  useEffect(()=>{ try{localStorage.setItem("hue-cat",cat)}catch(_){} },[cat]);
+
+  const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/đ/gi,"d").toLowerCase();
+  const shown = useMemo(()=>CATS
+    .filter(c=>inSel(cat, c.id))
+    .map(c=>({...c, places:c.places.filter(p=>
+      (!q || norm(p.n+" "+p.a+" "+p.note+" "+p.tags.join(" ")).includes(norm(q))) &&
+      (!onlyOpen || isOpen(p.h, now)))}))
+    .filter(c=>c.places.length), [cat,q,onlyOpen,now]);
+
+  const total = CATS.reduce((s,c)=>s+c.places.length,0);
+  const hh = String(Math.floor(now.min/60)).padStart(2,"0"), mm = String(now.min%60).padStart(2,"0");
+
+  return e("div",{className:"wrap"},
+    e("header",null,
+      e("div",{className:"clock"},`Giờ Huế · ${DAYS[now.day]} ${hh}:${mm}`),
+      e("h1",null,"Ăn Gì Ở Huế"),
+      e("p",{className:"sub"},`Hello em, có lẽ em đang đói bụng rồi đúng không? Đừng lo, Huế không vội, nên ăn ở Huế cũng chẳng cần vội. ${total} quán nhỏ trong trang này được anh và những người bạn thương Huế góp nhặt dần, từ tô bún bò bốc khói lúc sáng sớm, chén cơm hến cay xé lưỡi bên cồn Hến, đến ly cà phê muối ngồi ngắm sông Hương trôi. Mong em ghé đâu cũng thấy ấm lòng, và mang về một chút vị Huế để nhớ.`)),
+    e(Weather),
+    e("div",{className:"bar"},
+      e("div",{className:"groups",role:"group","aria-label":"Chọn nhóm"},
+        GROUPS.map(g=>e("button",{key:g.id,className:"grp","aria-pressed":cat===g.id,onClick:()=>setCat(g.id)},g.name))),
+      e("div",{className:"chips",role:"group","aria-label":"Chọn món"},
+        CATS.map(c=>{ const n=c.places.length; return e("button",{key:c.id,className:"chip","aria-pressed":cat===c.id,onClick:()=>setCat(cat===c.id?"all":c.id)},c.name+" · "+n); })),
+      e("div",{className:"row"},
+        e("input",{id:"q",type:"search",placeholder:"Tìm quán, đường, món…",value:q,onChange:ev=>setQ(ev.target.value),"aria-label":"Tìm kiếm"}),
+        e("label",{className:"toggle"},
+          e("input",{id:"open",type:"checkbox",checked:onlyOpen,onChange:ev=>setOnlyOpen(ev.target.checked)}),
+          "Chỉ quán đang mở"))),
+    shown.length===0
+      ? e("p",{className:"empty"},"Không có quán nào khớp. Thử bỏ bộ lọc \"Chỉ quán đang mở\" hoặc đổi từ khóa.")
+      : shown.map(c=>e("section",{key:c.id},
+          e("h2",null,c.name,e("small",null,c.places.length+" quán")),
+          e("p",{className:"intro"},c.intro),
+          e("div",{className:"grid"},c.places.map(p=>e(Card,{key:p.pid,p,now}))))),
+    e("footer",null,"Dữ liệu lấy từ Google Maps ngày 26/10/2026. Giờ mở cửa và giá có thể đã thay đổi, nhất là quán vỉa hè. Review trên Google thiên về khách du lịch, nên hỏi thêm người Huế nếu có thể.")
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(e(App));
+</script>
+
+</body></html>
